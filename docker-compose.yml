@@ -1,0 +1,12 @@
+services:
+  laravel:
+    build: ./laravel-backend
+    container_name: backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./laravel-backend:/var/www
+    working_dir: /var/www
+    command: php artisan serve --host=0.0.0.0 --port=8000
+
+ 
